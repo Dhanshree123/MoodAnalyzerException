@@ -3,7 +3,7 @@ package MoodAnalyzer;
 public class MoodAnalyzer {
 private String msg;
 	
-	public MoodAnalyzer(MoodAnalyzer obj) {
+	public MoodAnalyzer(String msg) {
 		this.msg =msg;
 	}
 	
@@ -13,15 +13,12 @@ private String msg;
 	}
 	
 	public String analyzeMood() {
-		try {
-			if(msg.contains("sad"))
+		
+			if(msg.toLowerCase().contains("sad"))
 				return "SAD";
 			else
 				return "HAPPY";
-		}
-		catch (NullPointerException e) {
-			return "HAPPY";
-		}
+		
 	}
 
 }
